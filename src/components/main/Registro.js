@@ -25,7 +25,7 @@ function Registro() {
         telefono: inputTelefono,
       },
       withCredentials: true,
-      url: "http://localhost:3001/users/signup",
+      url: `${process.env.REACT_APP_API_URL}/users/signup`,
     }).then((res) => console.log(res));
   };
 

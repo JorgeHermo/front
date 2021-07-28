@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 function Noticias() {
   const [noticias, setNoticias] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3001/noticias/noticias")
+    fetch(`${process.env.REACT_APP_API_URL}/noticias/noticias`)
       .then((res) => res.json())
       .then((datos) => {
         setNoticias(datos);

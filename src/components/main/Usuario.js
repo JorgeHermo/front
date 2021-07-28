@@ -20,7 +20,7 @@ function Usuario(props) {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/users/login",
+      url: `${process.env.REACT_APP_API_URL}/users/login`,
     }).then((res) => {
       console.log(res);
       props.setUsuario(res.data);

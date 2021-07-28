@@ -7,7 +7,7 @@ function Header(props) {
     axios({
       method: "POST",
       withCredentials: true,
-      url: "http://localhost:3001/users/logout",
+      url: `${process.env.REACT_APP_API_URL}/users/logout`,
     }).then((res) => {
       props.setUsuario({});
     });

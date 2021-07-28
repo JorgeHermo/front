@@ -1,5 +1,4 @@
 import { Card, Row, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 function About() {
   return (

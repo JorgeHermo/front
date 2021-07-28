@@ -6,7 +6,7 @@ function Bandas() {
   const [bandas, setBandas] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/bandas/bandas")
+    fetch(`${process.env.REACT_APP_API_URL}/bandas/bandas`)
       .then((res) => res.json())
       .then((datos) => {
         setBandas(datos);

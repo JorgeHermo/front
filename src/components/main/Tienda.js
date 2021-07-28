@@ -46,7 +46,7 @@ function Tienda() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3001/tienda/tienda")
+    fetch(`${process.env.REACT_APP_API_URL}/tienda/tienda`)
       .then((res) => res.json())
       .then((datos) => {
         setTienda(datos);
